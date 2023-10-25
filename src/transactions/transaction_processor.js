@@ -1,6 +1,4 @@
 function processTransactions(transActions) {
-  let txr = [];
-
   if (!transActions) {
     throw new Error("Undefined collection of transactions");
   }
