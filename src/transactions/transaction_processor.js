@@ -1,9 +1,9 @@
-function processTransactions(transActions) {
-  if (!transActions) {
+function processTransactions(transactions) {
+  if (!transactions) {
     throw new Error("Undefined collection of transactions");
   }
 
-  let txCount = transActions.reduce((transaction, entry) => {
+  let txCount = transactions.reduce((transaction, entry) => {
     return { ...transaction, [entry]: (transaction[entry] || 0) + 1 };
   }, {});
 
