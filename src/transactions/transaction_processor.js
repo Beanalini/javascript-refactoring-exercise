@@ -10,9 +10,7 @@ function processTransactions(transactions) {
   return Object.keys(txCount)
     .sort(
       (itemOne, itemTwo) =>
-        txCount[itemTwo] - txCount[itemOne] ||
-        itemOne > itemTwo ||
-        -(itemOne < itemTwo)
+        txCount[itemTwo] - txCount[itemOne] || itemOne.localeCompare(itemTwo)
     )
     .map((key) => `${key} ${txCount[key]}`);
 }
